@@ -1057,6 +1057,24 @@ nav.links a.active::after{width:100%;}
 /* ---- tighter gap only between creators section and approach section ---- */
 #clients{padding-bottom:clamp(40px,5vw,64px);}
 #approach{padding-top:clamp(40px,5vw,64px);}
+
+/* ---- refined subtitle typography ---- */
+.section-desc,.approach-head p,.ytc-label em{font-family:var(--font-body);font-weight:400;-webkit-font-smoothing:antialiased;text-wrap:balance;}
+.section-desc{max-width:400px;font-size:16px;line-height:1.65;letter-spacing:-0.011em;color:var(--ink-soft);opacity:.92;}
+.approach-head p{max-width:520px;margin:0 auto;font-size:17px;line-height:1.65;letter-spacing:-0.012em;color:var(--ink-soft);opacity:.92;}
+.ytc-label em{font-size:15px;line-height:1.5;letter-spacing:-0.01em;color:var(--ink-soft);opacity:.85;}
+@media (max-width:700px){.section-desc{font-size:15px;max-width:none;}.approach-head p{font-size:16px;}}
+
+/* ---- subtitle placement: clear, even breathing room under the big heading ---- */
+.section-head{align-items:flex-end;}
+.section-head > div{max-width:640px;}
+.section-title{line-height:1.08;}
+.section-head .section-desc{display:block;margin:20px 0 0 !important;max-width:46ch;font-size:16.5px;line-height:1.6;letter-spacing:-0.012em;opacity:.85;}
+.approach-head h2{margin:18px 0 20px !important;}
+.approach-head p{margin:0 auto !important;max-width:46ch;}
+.ytc-label{gap:16px;margin-bottom:28px;}
+.ytc-label em{font-size:15px;letter-spacing:-0.01em;opacity:.85;}
+@media (max-width:700px){.section-head .section-desc{margin-top:14px !important;font-size:15.5px;}}
 </style>
 </head>
 <body>
