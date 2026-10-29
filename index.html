@@ -996,6 +996,52 @@ nav.links a.active::after{width:100%;}
 .ytc-go svg{width:16px;height:16px;}
 .ytc:hover .ytc-go{background:var(--blue);color:#fff;transform:rotate(45deg);}
 @media (max-width:900px){.ytc-grid{grid-template-columns:1fr;max-width:460px;}}
+/* ===== SIZO VS OTHERS COMPARISON (remove this block + the matching HTML block to delete) ===== */
+.vs-wrap{max-width:980px;margin:0 auto clamp(64px,8vw,110px);}
+.vs-head{text-align:center;font-size:clamp(28px,4vw,46px);font-weight:700;letter-spacing:-0.04em;line-height:1.05;color:#111;margin-bottom:44px;}
+.vs-head span{background:linear-gradient(90deg,#1F55C8,#5E95FF);-webkit-background-clip:text;background-clip:text;color:transparent;}
+.vs-sub{text-align:center;color:#4B5565;font-size:15.5px;line-height:1.6;max-width:540px;margin:0 auto 44px;}
+.vs-board{display:grid;grid-template-columns:.9fr 1.1fr 1.15fr;padding:18px 0;}
+.vs-board>div{display:flex;align-items:center;gap:12px;padding:20px clamp(14px,2vw,26px);font-size:14.5px;line-height:1.45;border-top:1px solid rgba(17,17,17,.07);}
+.vs-board>div.f{font-weight:700;color:#111;font-size:15px;}
+.vs-board>div.o{color:#5B6575;}
+.vs-board>div.s{color:#fff;font-weight:600;background:linear-gradient(180deg,#2F6FED,#1F55C8);border-top:1px solid rgba(255,255,255,.18);}
+.vs-board>div.h{border-top:0;font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#8A93A3;}
+.vs-board>div.h.s{color:#fff;font-size:15px;letter-spacing:-0.01em;text-transform:none;border-radius:22px 22px 0 0;margin-top:-18px;padding-top:34px;box-shadow:0 -10px 30px -12px rgba(47,111,237,.5);}
+.vs-board>div.s.last{border-radius:0 0 22px 22px;margin-bottom:-18px;padding-bottom:34px;box-shadow:0 34px 50px -22px rgba(47,111,237,.55);}
+.vs-board>div.f.first,.vs-board>div.o.first{}
+.vs-board i{flex:none;width:22px;height:22px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;}
+.vs-board .o i{background:#EEF0F4;}
+.vs-board .s i{background:rgba(255,255,255,.22);}
+.vs-board svg{width:11px;height:11px;fill:none;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round;}
+.vs-board .o svg{stroke:#8A93A3;}
+.vs-board .s svg{stroke:#fff;}
+@media (max-width:700px){
+  .vs-board{grid-template-columns:1fr 1fr;padding:0;}
+  .vs-board>div.f{grid-column:1 / -1;padding-bottom:6px;padding-top:22px;}
+  .vs-board>div.h.f,.vs-board>div.h.s{margin-top:0;border-radius:0;box-shadow:none;}
+  .vs-board>div.h.f{display:none;}
+  .vs-board>div.h.o{grid-column:1;}.vs-board>div.h.s{grid-column:2;padding-top:20px;}
+  .vs-board>div.s.last{margin-bottom:0;border-radius:0 0 0 0;box-shadow:none;}
+  .vs-board>div{font-size:13.5px;padding:12px 14px;border-top:0;}
+  .vs-board>div.s{border-top:0;}
+}
+/* --- stronger Sizo highlight --- */
+.vs-board{grid-template-columns:.85fr 1fr 1.3fr;}
+.vs-board>div.o{opacity:.78;}
+.vs-board>div.s{position:relative;z-index:1;margin-left:-10px;margin-right:-10px;padding-left:calc(clamp(14px,2vw,26px) + 10px);padding-right:calc(clamp(14px,2vw,26px) + 10px);font-size:15.5px;font-weight:700;background:#2A62E8;border-top:1px solid rgba(255,255,255,.22);box-shadow:0 0 0 1px rgba(255,255,255,.12) inset,0 0 44px -8px rgba(47,111,237,.65);}
+.vs-board>div.s i{background:#fff;box-shadow:0 4px 12px -2px rgba(0,0,0,.25);}
+.vs-board .s svg{stroke:#2A62E8;stroke-width:3.2;}
+.vs-board>div.s.h{background:linear-gradient(180deg,#1B49B8,#2457D6);font-size:20px;font-weight:800;letter-spacing:-0.02em;justify-content:space-between;border-top:0;box-shadow:0 0 0 1px rgba(255,255,255,.14) inset,0 -10px 36px -10px rgba(47,111,237,.7);}
+.vs-board>div.s.h::after{content:"Top pick";font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:#1F55C8;background:#fff;padding:5px 11px;border-radius:100px;}
+.vs-board>div.s.last{box-shadow:0 0 0 1px rgba(255,255,255,.12) inset,0 40px 70px -22px rgba(47,111,237,.75),0 0 44px -8px rgba(47,111,237,.65);}
+@media (max-width:700px){
+  .vs-board{grid-template-columns:1fr 1fr;}
+  .vs-board>div.s{margin:0;padding-left:14px;padding-right:14px;font-size:13.5px;}
+  .vs-board>div.s.h{font-size:16px;}
+  .vs-board>div.s.h::after{display:none;}
+}
+/* ===== END SIZO VS OTHERS ===== */
 </style>
 </head>
 <body>
@@ -1019,6 +1065,7 @@ nav.links a.active::after{width:100%;}
     <a href="#best-work-long">Work</a>
     <a href="#testimonial">Testimonial</a>
     <a href="#reviews">Reviews</a>
+    <a href="#fix">Why Sizo</a>
     <a href="#contact">Contact</a>
     <a href="#about">About</a>
   </nav>
@@ -1230,8 +1277,22 @@ nav.links a.active::after{width:100%;}
 <!-- ============ GUESS WHAT / SIZO FIXES ============ -->
 <section class="fix-section" id="fix">
   <div class="container">
-    <h2 class="fix-title reveal">Guess what? <span class="g">Sizo</span><br>fixes every one of these.</h2>
-    <p class="fix-sub reveal">Ideation first. I research, script and storyboard before any edit, so every video is built to hook, hold and convert.</p>
+
+    <!-- ===== SIZO VS OTHERS COMPARISON (remove this block to delete) ===== -->
+    <div class="vs-wrap">
+      <h3 class="vs-head reveal">Why <span>Sizo</span></h3>
+      <div class="vs-board reveal">
+        <div class="f h"></div><div class="o h">Others</div><div class="s h">Sizo</div>
+        <div class="f">Faster delivery</div><div class="o"><i><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></i>Deadlines slip, you wait and chase</div><div class="s"><i><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></i>Fast turnaround, delivered on time</div>
+        <div class="f">Faster replies</div><div class="o"><i><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></i>Hours or days of silence</div><div class="s"><i><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></i>Quick replies, you're never left guessing</div>
+        <div class="f">Ideas & scripting</div><div class="o"><i><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></i>You have to bring the idea</div><div class="s"><i><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></i>Research, script and storyboard done for you</div>
+        <div class="f">Hooks</div><div class="o"><i><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></i>The same intro for every video</div><div class="s"><i><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></i>A custom hook built for each video</div>
+        <div class="f">Revisions</div><div class="o"><i><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></i>Round after round of revisions</div><div class="s"><i><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></i>Rarely needed. Any fix is sent fast.</div>
+        <div class="f">Results</div><div class="o"><i><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></i>Just a finished video</div><div class="s last"><i><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></i>Views that turn into customers</div>
+      </div>
+    </div>
+    <!-- ===== END SIZO VS OTHERS ===== -->
+
     <div class="viz-grid">
 
       <article class="viz-card reveal">
@@ -1930,7 +1991,7 @@ document.querySelectorAll('a[href="#contact"]').forEach(a=>{
 <script>
 /* nav scroll-spy: highlight the link for the section currently on screen */
 (function(){
-  var map=[['clients','clients'],['approach','approach'],['best-work-long','best-work-long'],['best-work-short','best-work-long'],['testimonial','testimonial'],['reviews','reviews'],['fix',null],['contact','contact'],['about','about']];
+  var map=[['clients','clients'],['approach','approach'],['best-work-long','best-work-long'],['best-work-short','best-work-long'],['testimonial','testimonial'],['reviews','reviews'],['fix','fix'],['contact','contact'],['about','about']];
   var links=[].slice.call(document.querySelectorAll('nav.links a'));
   var secs=map.map(function(m){return [document.getElementById(m[0]),m[1]];}).filter(function(x){return x[0];});
   var tick=false;
