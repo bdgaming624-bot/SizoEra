@@ -1930,7 +1930,7 @@ document.querySelectorAll('a[href="#contact"]').forEach(a=>{
 <script>
 /* nav scroll-spy: highlight the link for the section currently on screen */
 (function(){
-  var map=[['best-work-long','best-work-long'],['best-work-short','best-work-long'],['clients','clients'],['testimonial','testimonial'],['reviews','reviews'],['approach','approach'],['fix','approach'],['about','about'],['contact','contact']];
+  var map=[['clients','clients'],['approach','approach'],['best-work-long','best-work-long'],['best-work-short','best-work-long'],['testimonial','testimonial'],['reviews','reviews'],['fix',null],['contact','contact'],['about','about']];
   var links=[].slice.call(document.querySelectorAll('nav.links a'));
   var secs=map.map(function(m){return [document.getElementById(m[0]),m[1]];}).filter(function(x){return x[0];});
   var tick=false;
